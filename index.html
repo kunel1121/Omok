@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <title>오목 게임</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <h1>오목 게임</h1>
+
+  <div id="controls">
+    <div class="control-group">
+      <label for="difficulty">난이도:</label>
+      <select id="difficulty">
+        <option value="easy">쉬움</option>
+        <option value="medium">중간</option>
+        <option value="hard">어려움</option>
+      </select>
+    </div>
+
+    <div class="control-group">
+      <span>선공/후공:</span>
+      <label><input type="radio" name="order" value="first" checked /> 선공(플레이어)</label>
+      <label><input type="radio" name="order" value="second" /> 후공(AI)</label>
+    </div>
+
+    <button id="startBtn">게임 시작</button>
+  </div>
+
+  <!-- JS가 그리는 캔버스 보드 (15x15, 칸 크기 30px → 450x450) -->
+  <canvas id="board" width="450" height="450" aria-label="오목판"></canvas>
+
+  <script src="script.js"></script>
+</body>
+</html>
